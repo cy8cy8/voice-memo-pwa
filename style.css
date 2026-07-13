@@ -1,0 +1,171 @@
+/* Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    min-height: 100dvh;
+    font-family: sans-serif;
+    background: #000;
+    color: #eee;
+    overflow-x: hidden;
+}
+
+/* Header */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background: #000;
+    border-bottom: 1px solid #222;
+}
+
+.header h1 {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.memo-count {
+    font-size: 0.73rem;
+    color: #888;
+    background: #111;
+    border: 1px solid #222;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+/* Main */
+.main {
+    padding: 0 16px 40px;
+}
+
+/* Recorder */
+.recorder-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0 32px;
+}
+
+.timer {
+    font-size: 2.8rem;
+    font-weight: 200;
+    letter-spacing: 0.06em;
+    font-variant-numeric: tabular-nums;
+    color: #888;
+    transition: color 0.3s;
+}
+
+.timer.active {
+    color: #ff4757;
+}
+
+.record-btn {
+    padding: 10px 20px;
+    border: 2px solid #7c73e6;
+    border-radius: 8px;
+    background: transparent;
+    color: #7c73e6;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.record-btn.recording {
+    background: #ff4757;
+    border-color: #ff4757;
+    color: white;
+}
+
+.record-btn:active {
+    opacity: 0.75;
+}
+
+/* Memo list */
+.memos-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Memo card */
+.memo-card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 16px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.memo-title {
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+.memo-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.play-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1.5px solid #7c73e6;
+    background: transparent;
+    cursor: pointer;
+    color: #7c73e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+    flex-shrink: 0;
+}
+
+.play-btn svg {
+    width: 12px;
+    height: 12px;
+}
+
+.play-btn.playing {
+    background: #7c73e6;
+    color: white;
+}
+
+.play-btn:active {
+    opacity: 0.75;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888;
+    font-size: 1rem;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.delete-btn:active {
+    background: #300;
+}

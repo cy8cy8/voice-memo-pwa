@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <defs>
+        <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6d64d9"/>
+            <stop offset="100%" stop-color="#a78bfa"/>
+        </linearGradient>
+    </defs>
+    <!-- Background -->
+    <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+    <!-- Mic body -->
+    <rect x="196" y="86" width="120" height="200" rx="60" fill="white"/>
+    <!-- Stand arc -->
+    <path d="M148 272 Q148 392 256 392 Q364 392 364 272" 
+        stroke="white" stroke-width="28" fill="none"
+        stroke-linecap="round"/>
+    <!-- Pole -->
+    <line x1="256" y1="392" x2="256" y2="440"  
+        stroke="white" stroke-width="28" stroke-linecap="round"/>
+    <!-- Base -->
+    <line x1="196" y1="440" x2="316" y2="440"  
+        stroke="white" stroke-width="28" stroke-linecap="round"/>
+</svg>

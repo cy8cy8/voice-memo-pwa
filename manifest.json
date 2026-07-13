@@ -1,0 +1,19 @@
+{
+    "name": "Voice Memo Recorder",
+    "short_name": "Voice Memo",
+    "description": "Record your ideas on the go",
+    "start_url": "./",
+    "scope": "./",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#0d0d1a",
+    "theme_color": "#000",
+    "icons": [
+        {
+            "src": "icons/icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ]
+}
