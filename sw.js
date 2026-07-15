@@ -23,7 +23,17 @@ self.addEventListener('activate', e => {
 });
 
 self.addEventListener('fetch', e => {
-    e.respondWith(
-        caches.match(e.request).then(cached => cached || fetch(e.request))
-    );
+    // For HTML pages: network-first, fallback to cache
+    if (e.request.headers.get('accept')?.includes('text/html')) {
+        e.respondWith(
+            fetch(e.request)
+                .then(response => response.ok ? response : caches.match(e.request))
+                .catch(() => caches.match(e.request) || caches.match('./index.html'))
+        );
+    } else {
+        // For assets: cache-first (your current strategy)
+        e.respondWith(
+            caches.match(e.request).then(cached => cached || fetch(e.request))
+        );
+    }
 });
